@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pip_conf_index_global"
+
+[packages]
+beautifulsoup4 = "*"
+google-cloud-pubsub = "==2.13.0"
+avro = "==1.11.0"
+langchain = "*"
+black = "*"
+python-dotenv = "*"
+langchain-community = "*"
+pydantic = "==2.9.0"
+streamlit = "*"
+streamlit-chat = "*"
+requests = "*"
+google-cloud-bigquery = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"

@@ -2,7 +2,6 @@ import os
 import json
 
 from google.cloud import bigquery
-# from langchain_openai import OpenAIEmbeddings
 from langchain_google_vertexai import VertexAIEmbeddings
 from langchain.vectorstores.utils import DistanceStrategy
 

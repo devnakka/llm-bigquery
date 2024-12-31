@@ -9,7 +9,7 @@ from streamlit_chat import message
 from backend.core import run_llm
 
 st.set_page_config(
-    page_title="Your App Title",
+    page_title="LLM Sample Application",
     page_icon="🧊",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -76,7 +76,7 @@ with st.sidebar:
 
     # You can replace these with actual user data
     user_name = "Srikanth Nakka"
-    user_email = "srikanth.nakka@exabeam.com"
+    user_email = "srikanthnakka@gmail.com"
 
     profile_pic = get_profile_picture(user_email)
     st.image(profile_pic, width=150)

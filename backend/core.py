@@ -54,10 +54,8 @@ class BigQueryRetriever(BaseRetriever):
         )
 
 def run_llm(query: str, chat_history: List[Dict[str, Any]] = []):
-    #embedding = VertexAIEmbeddings(model_name="textembedding-gecko@latest", project=PROJECT_ID)
     filter = {"context": "langchain-docs"}
     retriever = BigQueryRetriever(project_id=PROJECT_ID, region=REGION, dataset=DATASET, table=TABLE, filter=filter)
-    #chat = ChatVertexAI(model="gemini-1.5-flash-001",verbose=True, temperature=0)
     rephrase_prompt = hub.pull("langchain-ai/chat-langchain-rephrase")
     retrieval_qa_chat_prompt = hub.pull("langchain-ai/retrieval-qa-chat")
     stuff_documents_chain = create_stuff_documents_chain(LLM, retrieval_qa_chat_prompt)
